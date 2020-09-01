@@ -1,2 +1,2 @@
 # quick-notes
-A basic CRUD using Python and Tkinter
+A basic CRUD using Python, Tkinter and PostgreSQL

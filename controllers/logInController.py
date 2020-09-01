@@ -1,5 +1,5 @@
 import psycopg2
-from models import usuario
+from models import user
 import config
 
 def insertUser(name,lastname,email,password):
@@ -14,6 +14,7 @@ def insertUser(name,lastname,email,password):
     conn.commit()
     cursor.close()
     conn.close()
+    return True
 
 def logIn(email,password):
     conn=psycopg2.connect(
