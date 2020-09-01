@@ -42,16 +42,16 @@ password = StringVar()
 
 home()
 
-register = Frame(mainWindow,width=250,height=250)
-regLabel=Label(register,text="Sign Up")
-labelName=Label(register,text="Name:")
-entryName=Entry(register, textvariable=name)
-labelLast=Label(register,text="Last name:")
-entryLast=Entry(register, textvariable=lastname)
-labelEmail=Label(register,text="Email:")
-entryEmail=Entry(register, textvariable=email)
-labelPass=Label(register,text="Password:")
-entryPass=Entry(register, textvariable=password)
+
+regLabel=Label(mainWindow,text="Sign Up")
+labelName=Label(mainWindow,text="Name:")
+entryName=Entry(mainWindow, textvariable=name)
+labelLast=Label(mainWindow,text="Last name:")
+entryLast=Entry(mainWindow, textvariable=lastname)
+labelEmail=Label(mainWindow,text="Email:")
+entryEmail=Entry(mainWindow, textvariable=email)
+labelPass=Label(mainWindow,text="Password:")
+entryPass=Entry(mainWindow, textvariable=password)
 
 regLabel.grid(row=0,column=0,padx=5,pady=5)
 labelName.grid(row=1,column=0,padx=5,pady=5)
@@ -63,10 +63,10 @@ entryEmail.grid(row=3,column=1,padx=5,pady=5)
 labelPass.grid(row=4,column=0,padx=5,pady=5)
 entryPass.grid(row=4,column=1,padx=5,pady=5)
 
-registerButton=Button(register,command=getAndRegister,text="Sign Up")
+registerButton=Button(mainWindow,text="Sign Up",command=getAndRegister)
 registerButton.grid(row=5,column=0,padx=5,pady=5)
 
-register.grid(row=1,column=0,columnspan=6)
+
 
 topMenu = Menu(mainWindow)
 topMenu.add_command(label="Exit", command=mainWindow.quit)
