@@ -29,8 +29,8 @@ def logIn(email,password):
     cursor.close()
     conn.close()
     if len(existe)>0:
-        user=usuario.Usuario(existe[0][0],existe[0][1],existe[0][2],existe[0][3],existe[0][4])
-        return user
+        theUser=user.User(existe[0][0],existe[0][1],existe[0][2],existe[0][3],existe[0][4])
+        return theUser
     else:
         return False
     
